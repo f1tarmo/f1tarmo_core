@@ -1,0 +1,13 @@
+{
+    // Onshape URL of the assembly
+    "url": "https://cad.onshape.com/documents/61ba5ba62381fd64bbeea859/w/cb2fd1f3287b069a6eae6b15/e/617dda5fe1f5b2023eaf39f8",
+    // Output format
+    "output_format": "urdf",
+    // Ignore parts from the RealSense assembly named Part 1 and Part 2 for now.
+    "ignore": ["Part 1", "Part 2"],
+    "merge_stls": true,
+    // Simplify STL meshes (default: false)
+    "simplify_stls": true,
+    // Maximum size of the STL files in MB (default: 3)
+    "max_stl_size": 5
+}

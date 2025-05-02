@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/61ba5ba62381fd64bbeea859/w/cb2fd1f3287b069a6eae6b15/e/617dda5fe1f5b2023eaf39f8 -->
+<robot name="model">
+  <!-- Link drive_assembly -->
+  <link name="drive_assembly">
+    <inertial>
+      <origin xyz="-0.00185916 -0.00794116 0.0328166" rpy="0 0 0"/>
+      <mass value="1.17575"/>
+      <inertia ixx="0.0057762" ixy="3.43161e-05" ixz="6.0363e-06" iyy="0.00117109" iyz="-6.78464e-05" izz="0.00529115"/>
+    </inertial>
+    <!-- Part drive_assembly_parts -->
+    <visual>
+      <origin xyz="-0.00185916 -0.00794116 0.0328166" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/drive_assembly_visual.stl"/>
+      </geometry>
+      <material name="drive_assembly_parts_material">
+        <color rgba="0.37623 0.403407 0.332086 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00185916 -0.00794116 0.0328166" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/drive_assembly_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame base_link (dummy link + fixed joint) -->
+  <link name="base_link">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="base_link_frame" type="fixed">
+    <origin xyz="-0.00101305 -0.142952 0.0357512" rpy="-0.017172 0.029487 1.57102"/>
+    <parent link="drive_assembly"/>
+    <child link="base_link"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame base_link_frd (dummy link + fixed joint) -->
+  <link name="base_link_frd">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="base_link_frd_frame" type="fixed">
+    <origin xyz="-0.00101305 -0.142952 0.0357512" rpy="3.12442 0.029487 1.57102"/>
+    <parent link="drive_assembly"/>
+    <child link="base_link_frd"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Frame realsense_bottom_screw_mount (dummy link + fixed joint) -->
+  <link name="realsense_bottom_screw_mount">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="realsense_bottom_screw_mount_frame" type="fixed">
+    <origin xyz="-0.00301065 0.186415 0.0911755" rpy="-3.1121 0.0171645 -3.14087"/>
+    <parent link="drive_assembly"/>
+    <child link="realsense_bottom_screw_mount"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Link right_bearing_hub_assembly -->
+  <link name="right_bearing_hub_assembly">
+    <inertial>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="0 0 0"/>
+      <mass value="0.000456118"/>
+      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="4.96308e-24" iyy="1.59641e-08" iyz="2.81241e-23" izz="1.43638e-08"/>
+    </inertial>
+    <!-- Part right_bearing_hub_assembly_parts -->
+    <visual>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="2.90924 -0.0165361 -3.13693"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/right_bearing_hub_assembly_visual.stl"/>
+      </geometry>
+      <material name="right_bearing_hub_assembly_parts_material">
+        <color rgba="0.615686 0.811765 0.929412 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="2.90924 -0.0165361 -3.13693"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/right_bearing_hub_assembly_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link wheel_110mm -->
+  <link name="wheel_110mm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part wheel_110mm_parts -->
+    <visual>
+      <origin xyz="-0.128518 -0.0409903 0.194951" rpy="-1.8479 1.2167 3.09389"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_visual.stl"/>
+      </geometry>
+      <material name="wheel_110mm_parts_material">
+        <color rgba="nan nan nan 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.128518 -0.0409903 0.194951" rpy="-1.8479 1.2167 3.09389"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from right_bearing_hub_assembly to wheel_110mm -->
+  <joint name="front_right_wheel_joint" type="continuous">
+    <origin xyz="-0.0211378 0.00769354 0.0122" rpy="1.5708 -2.22045e-16 1.22173"/>
+    <parent link="right_bearing_hub_assembly"/>
+    <child link="wheel_110mm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.295433" upper="-0.295433"/>
+  </joint>
+  <!-- Joint from drive_assembly to right_bearing_hub_assembly -->
+  <joint name="right_steer_joint" type="revolute">
+    <origin xyz="0.117722 0.181636 0.0153911" rpy="2.90928 0.0171645 -3.14087"/>
+    <parent link="drive_assembly"/>
+    <child link="right_bearing_hub_assembly"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-7.93143e-13" upper="0.698132"/>
+  </joint>
+  <!-- Link left_bearing_hub_assembly -->
+  <link name="left_bearing_hub_assembly">
+    <inertial>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="0 0 0"/>
+      <mass value="0.000456118"/>
+      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="-6.41065e-24" iyy="1.59641e-08" iyz="8.27181e-25" izz="1.43638e-08"/>
+    </inertial>
+    <!-- Part left_bearing_hub_assembly_parts -->
+    <visual>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="2.90924 -0.0165361 0.0046591"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/left_bearing_hub_assembly_visual.stl"/>
+      </geometry>
+      <material name="left_bearing_hub_assembly_parts_material">
+        <color rgba="0.615686 0.811765 0.929412 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197283 0.00718051 0.0122" rpy="2.90924 -0.0165361 0.0046591"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/left_bearing_hub_assembly_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link wheel_110mm_2 -->
+  <link name="wheel_110mm_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part wheel_110mm_2_parts -->
+    <visual>
+      <origin xyz="-0.210199 0.0409903 0.074456" rpy="1.29369 -1.2167 -3.09389"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_2_visual.stl"/>
+      </geometry>
+      <material name="wheel_110mm_2_parts_material">
+        <color rgba="nan nan nan 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.210199 0.0409903 0.074456" rpy="1.29369 -1.2167 -3.09389"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_2_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from left_bearing_hub_assembly to wheel_110mm_2 -->
+  <joint name="front_left_wheel_joint" type="continuous">
+    <origin xyz="-0.0211378 0.00769354 0.0122" rpy="-1.5708 -1.38778e-16 -1.91986"/>
+    <parent link="left_bearing_hub_assembly"/>
+    <child link="wheel_110mm_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from drive_assembly to left_bearing_hub_assembly -->
+  <joint name="front_left_steer_joint" type="revolute">
+    <origin xyz="-0.121064 0.181462 0.0112921" rpy="-2.90928 -0.0171645 0.000726476"/>
+    <parent link="drive_assembly"/>
+    <child link="left_bearing_hub_assembly"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-5.83311e-13" upper="0.698132"/>
+  </joint>
+  <!-- Link wheel_110mm_3 -->
+  <link name="wheel_110mm_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part wheel_110mm_3_parts -->
+    <visual>
+      <origin xyz="0.141943 -0.0118641 0.139284" rpy="0.042295 -1.55362 -1.58361"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_3_visual.stl"/>
+      </geometry>
+      <material name="wheel_110mm_3_parts_material">
+        <color rgba="nan nan nan 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.141943 -0.0118641 0.139284" rpy="0.042295 -1.55362 -1.58361"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_3_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from drive_assembly to wheel_110mm_3 -->
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <origin xyz="-0.139436 -0.141633 0.0136514" rpy="1.55362 0.029487 1.57102"/>
+    <parent link="drive_assembly"/>
+    <child link="wheel_110mm_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link wheel_110mm_4 -->
+  <link name="wheel_110mm_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part wheel_110mm_4_parts -->
+    <visual>
+      <origin xyz="0.141943 0.0118641 0.138285" rpy="-3.0993 1.55362 1.58361"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_4_visual.stl"/>
+      </geometry>
+      <material name="wheel_110mm_4_parts_material">
+        <color rgba="nan nan nan 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.141943 0.0118641 0.138285" rpy="-3.0993 1.55362 1.58361"/>
+      <geometry>
+        <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_4_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from drive_assembly to wheel_110mm_4 -->
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <origin xyz="0.138092 -0.141431 0.0184155" rpy="-1.58797 0.029487 1.57102"/>
+    <parent link="drive_assembly"/>
+    <child link="wheel_110mm_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+</robot>
