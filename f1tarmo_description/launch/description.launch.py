@@ -11,7 +11,7 @@ import os
 
 def generate_launch_description():
     pkg_share = FindPackageShare(package='f1tarmo_description').find('f1tarmo_description')
-    default_model_path = os.path.join(pkg_share, 'model', 'robot.urdf')
+    default_model_path = os.path.join(pkg_share, 'model', 'f1tarmo.urdf.xacro')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz', 'config.rviz')
 
     robot_state_publisher_node = Node(
@@ -23,7 +23,7 @@ def generate_launch_description():
         package='joint_state_publisher',
         executable='joint_state_publisher',
         name='joint_state_publisher',
-        parameters=[{'robot_description': Command(['xacro ', default_model_path])}],
+        parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}],
         condition=UnlessCondition(LaunchConfiguration('gui'))
     )
     joint_state_publisher_gui_node = Node(
