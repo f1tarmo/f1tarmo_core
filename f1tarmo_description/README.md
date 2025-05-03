@@ -8,6 +8,9 @@ The README for this package should detail:
   woes with onshape-to-robot, etc. Basically, explain to them why the base link
   isn't the root (if I end up doing that). This would also be a good place to
   describe REP 105...
+- Additionally, there should be a description for EACH URDF / model file in
+  here. For now, there is just the model with a realsense and a standalone model
+  with no sensor.
 
 For the URDF generated from CAD via onshape-to-robot, I'm thinking that I should
 just drop a link in there to the document in the doc folder that describes the
