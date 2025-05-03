@@ -76,7 +76,7 @@
     <inertial>
       <origin xyz="-0.0197283 0.00718051 0.0122" rpy="0 0 0"/>
       <mass value="0.000456118"/>
-      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="4.96308e-24" iyy="1.59641e-08" iyz="2.81241e-23" izz="1.43638e-08"/>
+      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="5.16988e-24" iyy="1.59641e-08" iyz="2.7297e-23" izz="1.43638e-08"/>
     </inertial>
     <!-- Part right_bearing_hub_assembly_parts -->
     <visual>
@@ -140,7 +140,7 @@
     <inertial>
       <origin xyz="-0.0197283 0.00718051 0.0122" rpy="0 0 0"/>
       <mass value="0.000456118"/>
-      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="-6.41065e-24" iyy="1.59641e-08" iyz="8.27181e-25" izz="1.43638e-08"/>
+      <inertia ixx="2.64433e-08" ixy="-4.39656e-09" ixz="-6.20385e-24" iyy="1.59641e-08" iyz="1.65436e-24" izz="1.43638e-08"/>
     </inertial>
     <!-- Part left_bearing_hub_assembly_parts -->
     <visual>
