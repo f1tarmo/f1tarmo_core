@@ -98,22 +98,22 @@
   <!-- Link wheel_110mm -->
   <link name="wheel_110mm">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+      <origin xyz="-1.98506e-17 -4.22808e-18 -0.00228171" rpy="0 0 0"/>
+      <mass value="0.2311"/>
+      <inertia ixx="0.000214175" ixy="5.37358e-18" ixz="-2.93073e-19" iyy="0.000214175" iyz="-5.79371e-19" izz="0.000362677"/>
     </inertial>
     <!-- Part wheel_110mm_parts -->
     <visual>
-      <origin xyz="-0.128518 -0.0409903 0.194951" rpy="-1.8479 1.2167 3.09389"/>
+      <origin xyz="-2.77556e-17 -6.93889e-18 -0.00228171" rpy="-1.8479 1.2167 3.09389"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_visual.stl"/>
       </geometry>
       <material name="wheel_110mm_parts_material">
-        <color rgba="nan nan nan 1.0"/>
+        <color rgba="0 0.356863 0.329412 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.128518 -0.0409903 0.194951" rpy="-1.8479 1.2167 3.09389"/>
+      <origin xyz="-2.77556e-17 -6.93889e-18 -0.00228171" rpy="-1.8479 1.2167 3.09389"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_collision.stl"/>
       </geometry>
@@ -162,22 +162,22 @@
   <!-- Link wheel_110mm_2 -->
   <link name="wheel_110mm_2">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+      <origin xyz="-1.70142e-17 5.31372e-18 -0.00228171" rpy="0 0 0"/>
+      <mass value="0.2311"/>
+      <inertia ixx="0.000214175" ixy="1.35525e-19" ixz="-6.43745e-20" iyy="0.000214175" iyz="-5.42101e-20" izz="0.000362677"/>
     </inertial>
     <!-- Part wheel_110mm_2_parts -->
     <visual>
-      <origin xyz="-0.210199 0.0409903 0.074456" rpy="1.29369 -1.2167 -3.09389"/>
+      <origin xyz="-2.77556e-17 6.93889e-18 -0.00228171" rpy="1.29369 -1.2167 -3.09389"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_2_visual.stl"/>
       </geometry>
       <material name="wheel_110mm_2_parts_material">
-        <color rgba="nan nan nan 1.0"/>
+        <color rgba="0 0.356863 0.329412 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.210199 0.0409903 0.074456" rpy="1.29369 -1.2167 -3.09389"/>
+      <origin xyz="-2.77556e-17 6.93889e-18 -0.00228171" rpy="1.29369 -1.2167 -3.09389"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_2_collision.stl"/>
       </geometry>
@@ -202,22 +202,22 @@
   <!-- Link wheel_110mm_3 -->
   <link name="wheel_110mm_3">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+      <origin xyz="8.00627e-17 2.14073e-16 -0.00228171" rpy="0 0 0"/>
+      <mass value="0.2311"/>
+      <inertia ixx="0.000214175" ixy="2.60886e-19" ixz="-1.01922e-19" iyy="0.000214175" iyz="-2.05829e-19" izz="0.000362677"/>
     </inertial>
     <!-- Part wheel_110mm_3_parts -->
     <visual>
-      <origin xyz="0.141943 -0.0118641 0.139284" rpy="0.042295 -1.55362 -1.58361"/>
+      <origin xyz="8.32667e-17 2.15106e-16 -0.00228171" rpy="0.042295 -1.55362 -1.58361"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_3_visual.stl"/>
       </geometry>
       <material name="wheel_110mm_3_parts_material">
-        <color rgba="nan nan nan 1.0"/>
+        <color rgba="0 0.356863 0.329412 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.141943 -0.0118641 0.139284" rpy="0.042295 -1.55362 -1.58361"/>
+      <origin xyz="8.32667e-17 2.15106e-16 -0.00228171" rpy="0.042295 -1.55362 -1.58361"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_3_collision.stl"/>
       </geometry>
@@ -234,22 +234,22 @@
   <!-- Link wheel_110mm_4 -->
   <link name="wheel_110mm_4">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+      <origin xyz="-1.98625e-17 -8.64106e-17 -0.00228171" rpy="0 0 0"/>
+      <mass value="0.2311"/>
+      <inertia ixx="0.000214175" ixy="-8.63974e-20" ixz="3.88868e-19" iyy="0.000214175" iyz="-2.29122e-19" izz="0.000362677"/>
     </inertial>
     <!-- Part wheel_110mm_4_parts -->
     <visual>
-      <origin xyz="0.141943 0.0118641 0.138285" rpy="-3.0993 1.55362 1.58361"/>
+      <origin xyz="-2.77556e-17 -8.67362e-17 -0.00228171" rpy="-3.0993 1.55362 1.58361"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_4_visual.stl"/>
       </geometry>
       <material name="wheel_110mm_4_parts_material">
-        <color rgba="nan nan nan 1.0"/>
+        <color rgba="0 0.356863 0.329412 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.141943 0.0118641 0.138285" rpy="-3.0993 1.55362 1.58361"/>
+      <origin xyz="-2.77556e-17 -8.67362e-17 -0.00228171" rpy="-3.0993 1.55362 1.58361"/>
       <geometry>
         <mesh filename="package://f1tarmo_description/model/assets/merged/wheel_110mm_4_collision.stl"/>
       </geometry>

@@ -5,17 +5,17 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
-        - /Grid1
         - /RobotModel1
-        - /RobotModel1/Description Topic1
+        - /RobotModel1/Links1
         - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
         - /TF1/Tree1/drive_assembly1
+        - /TF1/Tree1/drive_assembly1/left_bearing_hub_assembly1
         - /TF1/Tree1/drive_assembly1/realsense_bottom_screw_mount1
         - /TF1/Tree1/drive_assembly1/realsense_bottom_screw_mount1/realsense_bottom_screw_frame1
         - /TF1/Tree1/drive_assembly1/realsense_bottom_screw_mount1/realsense_bottom_screw_frame1/realsense_link1
+        - /TF1/Tree1/drive_assembly1/right_bearing_hub_assembly1
       Splitter Ratio: 0.6027088165283203
     Tree Height: 733
   - Class: rviz_common/Selection
@@ -59,7 +59,7 @@ Visualization Manager:
       Value: true
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
-      Collision Enabled: true
+      Collision Enabled: false
       Description File: ""
       Description Source: Topic
       Description Topic:
@@ -330,7 +330,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.2482446432113647
+      Distance: 1.347947120666504
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -345,10 +345,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.37539833784103394
+      Pitch: 0.4053986966609955
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 0.5853983759880066
+      Yaw: 0.5553910732269287
     Saved: ~
 Window Geometry:
   Displays:
