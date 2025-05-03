@@ -2,16 +2,16 @@
 
 <robot name="f1tarmo" xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <!-- Name for RealSense camera frame -->
-    <xacro:arg name="name" default="realsense" />
-    <!-- Name of link in f1tarmo urdf that the realsense bottom screw link will
-    be mounted to -->
-    <xacro:arg name="parent" default="realsense_bottom_screw_mount" />
-
     <!-- Include the robot (e.g. AgileX Scout mini) -->
     <xacro:include filename="$(find f1tarmo_description)/model/robot.urdf" />
 
-    <!-- Add the RealSense D435i -->
+    <!-- Add the RealSense D435i xacro file. This contains a macro for creating
+    a D435i instance. -->
     <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+    
+    <!-- Create a D435i instance -->
+    <xacro:sensor_d435i name="realsense" parent="realsense_bottom_screw_mount" use_nominal_extrinsics="true">
+        <origin xyz="0 0 0" rpy="-3.14 0 1.57"/>
+    </xacro:sensor_d435i>
     
 </robot>
