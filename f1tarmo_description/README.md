@@ -62,13 +62,40 @@ To make a physical description of your robot, you have a few options these days:
 
 ## Generating URDF from Onshape
 ### Why?
-Of all the options above, why choose to generate one from a CAD model? 
+Why generate your robot's URDF from a CAD model instead of making it by hand?
+For almost any project, there are a few key factors that come to mind:
+1. **Allows for quick iterations and changes to the mechanical design**: Often
+   times, robots will be designed in CAD, but then some poor soul will have to
+   go and craft a URDF from the mechanical drawings given to them. That takes a
+   lot of time, especially if the robot's design is physically changing a lot.
+2. **Accurate sensor extrinsics**: So often, URDF tutorials will talk about
+   including sensors to your robot's design, but don't talk about _where those
+   sensors are actually mounted on the robot_. Unless you are just duct-taping
+   your LiDAR or camera to your robot, there's a good chance you have designed
+   or purchased some kind of mounting bracket to mount the sensor on your robot.
+   This mounting bracket can be included in your robot's CAD drawings, and a
+   link can be greated for the exact point the sensor is mounted to. _Yes,
+   sensor extrinsics are usually computed anyway, but not all systems have this
+   capability, and many of them that do still benefit from a good initial
+   guess._
+3. **Accurate dynamics and inertia**: If you have a detailed CAD model of your
+   robot (if you are Unitree or Bostom Dynamics, for example), then that model
+   probably estimates the mass of each component pretty accurately. If you want
+   to do any dynamic simulation with your robot, the dynamics properties of each
+   piece of your robot (mass and rotation inertial) need to be present. While
+   you can fill in these properties by hand, many of the toolboxes can extract
+   these properties and translate them directly into your robot's URDF.
+
+For the f1tarmo specifically: The Tarmo 5 (the fully 3D printed RC car that the
+f1tarmo is derived from) was originally designed from the ground up in Onshape
+(Thanks Engineering Nonsense). This means there was already a comprehensive
+mechanical model of the vehicle. To make a URDF from this design by hand seemed
+silly given all the work that was already put into the mechanical model.
+Additionally, sensor extrinsics are always a pain. For those reasons, the
+f1tarmo's URDF is primarily generated automatically from Onshape.
 
 ### How?
 
-One of the core design goals for the f1tarmo was to be able to automatically
-generate a robot description directly from the CAD software in which it was
-designed (Onshape). 
 
 ## TODO
 The README for this package should detail:
