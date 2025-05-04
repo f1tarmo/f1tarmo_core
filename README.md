@@ -19,3 +19,4 @@ connect with other blocks from higher level autonomy modules/blocks.
 - f1tenth/roboracer platform
 - onshape-to-robot
 - vesc
+- Inspiration from Stephen Ferro's autonomous Tarmo 5
