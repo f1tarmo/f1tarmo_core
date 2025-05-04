@@ -102,7 +102,7 @@ Additionally, sensor extrinsics are always a pain. For those reasons, the
 f1tarmo's URDF is primarily generated automatically from Onshape.
 
 ### How?
-#### Find an conversion tool
+#### Find a conversion tool
 To generate a URDF file from a CAD design, you will need some kind of tool that
 can talk take the CAD model from the software you use and translate it into
 URDF. There is [a whole
