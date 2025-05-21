@@ -27,6 +27,7 @@ endif()
 # https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Launch/Launch-system.html#creating-the-structure-to-hold-launch-files
 install(DIRECTORY
   launch
+  params
   DESTINATION share/${PROJECT_NAME}/
 )
 
