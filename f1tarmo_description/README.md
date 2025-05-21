@@ -9,13 +9,6 @@ cameras).
 This launch file serves as a simple way to visaulize and debug the f1tarmo's
 description in RVIZ.
 
-> [!TIP]
-> This launch file can be included in higher level launch files for your
-> project, but it is usually a good idea to just use this as a template and
-> create your own similar description launch file for your project. Because this
-> launch file is primarily meant for debugging/visualizing, it could have
-> features/changes that are not necessary / helpful for normal operation.
-
 ## URDF Files
 Update this section when I have the base urdf files figured out.
 
