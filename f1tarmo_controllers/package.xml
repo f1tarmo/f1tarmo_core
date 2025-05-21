@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>f1tarmo_controllers</name>
+  <version>0.0.1</version>
+  <description>Package with a node to translate a commanded twist motion to
+  wheel speed and steering angle commands the f1tarmo can execute. This
+  effectively serves as a vehicle command interface for the f1tarmo.</description>
+  <maintainer email="nlitz88@todo.todo">nlitz88</maintainer>
+  <license>MIT</license>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <depend>ackermann_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
