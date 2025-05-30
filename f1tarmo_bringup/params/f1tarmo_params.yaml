@@ -115,3 +115,54 @@ vesc_driver_node:
     position_max: 0.0
     servo_min: 0.15
     servo_max: 0.85
+
+joystick_interface_node:
+  ros__parameters:
+    # Pretty sure these are all currently default values. Taken directly from
+    # rqt dynamic reconfigure plugin.
+    autorepeat_rate: 20.0
+    coalesce_interval_ms: 1
+    deadzone: 0.05
+    device_id: 0
+    device_name: ''
+    qos_overrides./parameter_events.publisher.depth: 1000
+    qos_overrides./parameter_events.publisher.durability: volatile
+    qos_overrides./parameter_events.publisher.history: keep_last
+    qos_overrides./parameter_events.publisher.reliability: reliable
+    sticky_buttons: false
+    use_sim_time: false
+
+joystick_to_twist_node:
+  ros__parameters:
+    # Most of these are defaults taken directly from rqt dynamic reconfigure
+    # plugin.. The main values that we needed to set here were which axis was
+    # used for x, y, z, roll, pitch, and yaw control.
+    axis_angular.pitch: -1
+    axis_angular.roll: -1
+    axis_angular.yaw: 3
+    axis_linear.x: 1
+    axis_linear.y: 0
+    axis_linear.z: -1
+    enable_button: 4
+    enable_turbo_button: -1
+    frame: teleop_twist_joy
+    inverted_reverse: false
+    publish_stamped_twist: false
+    qos_overrides./parameter_events.publisher.depth: 1000
+    qos_overrides./parameter_events.publisher.durability: volatile
+    qos_overrides./parameter_events.publisher.history: keep_last
+    qos_overrides./parameter_events.publisher.reliability: reliable
+    require_enable_button: true
+    scale_angular.pitch: 0.0
+    scale_angular.roll: 0.0
+    scale_angular.yaw: 0.5
+    scale_angular_turbo.pitch: 0.0
+    scale_angular_turbo.roll: 0.0
+    scale_angular_turbo.yaw: 1.0
+    scale_linear.x: 1.0
+    scale_linear.y: 0.0
+    scale_linear.z: 0.0
+    scale_linear_turbo.x: 1.0
+    scale_linear_turbo.y: 0.0
+    scale_linear_turbo.z: 0.0
+    use_sim_time: false
