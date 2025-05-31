@@ -1,3 +1,7 @@
+# This node implements a kinematic bicycle model to convert Twist messages 
+# (screw motion) to Ackermann steering commands (steering angle and rear wheel
+# velocity).
+
 import numpy as np
 import rclpy
 from rclpy.node import Node
@@ -22,14 +26,22 @@ class KinematicBicycleModel:
 
     # Inverse kinematics function.
     def inverse_kinematics(self, cmd_v_x, cmd_v_yaw):
-        steering_angle = np.arctan2(cmd_v_yaw*self._wheelbase, cmd_v_x)
-        # Warp the steering angle to the range [-pi/2, pi/2].
-        if steering_angle > np.pi/2:
-            steering_angle -= np.pi
-        elif steering_angle < -np.pi/2:
-            steering_angle += np.pi
+        # # If the commanded velocities are zero, return a positive zero.
+        # if cmd_v_x == -0.0:
+        #     cmd_v_x = 0.0
+        # if cmd_v_yaw == -0.0:
+        #     cmd_v_yaw = 0.0
+        steering_angle = np.arctan2(cmd_v_yaw*self._wheelbase, np.abs(cmd_v_x))
+        # Wrap the steering angle to the range [-pi/2, pi/2].
+        # if steering_angle > np.pi/2:
+        #     steering_angle -= np.pi
+        # elif steering_angle < -np.pi/2:
+        #     steering_angle += np.pi
         rear_wheel_velocity = cmd_v_x
         return steering_angle, rear_wheel_velocity
+    
+    # TODO: Figure out what is wrong with my angle wrapping function and why I
+    # have to negate the steering angle!!!!
 
 # TODO: I wonder if it would be practical / possible to use something like
 # http://wiki.ros.org/kdl to produce the forward and inverse kinematics from an
