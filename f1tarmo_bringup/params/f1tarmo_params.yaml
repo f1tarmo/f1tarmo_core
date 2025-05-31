@@ -19,7 +19,7 @@ vesc_to_odom_node:
     speed_to_erpm_offset: 0.0
 
     # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-    steering_angle_to_servo_gain: -1.2135
+    steering_angle_to_servo_gain: 1.2135
     steering_angle_to_servo_offset: 0.5304
 
     port: /dev/sensors/vesc
@@ -48,7 +48,7 @@ ackermann_to_vesc_node:
     speed_to_erpm_offset: 0.0
 
     # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-    steering_angle_to_servo_gain: -1.2135
+    steering_angle_to_servo_gain: 1.2135
     steering_angle_to_servo_offset: 0.5304
 
     port: /dev/sensors/vesc
@@ -74,7 +74,7 @@ vesc_to_odom_node:
     speed_to_erpm_offset: 0.0
 
     # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-    steering_angle_to_servo_gain: -1.2135
+    steering_angle_to_servo_gain: 1.2135
     steering_angle_to_servo_offset: 0.5304
 
     port: /dev/sensors/vesc
@@ -99,7 +99,7 @@ vesc_driver_node:
     speed_to_erpm_offset: 0.0
 
     # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-    steering_angle_to_servo_gain: -1.2135
+    steering_angle_to_servo_gain: 1.2135
     steering_angle_to_servo_offset: 0.5304
 
     port: /dev/sensors/vesc
@@ -144,7 +144,7 @@ joystick_to_twist_node:
     axis_linear.y: 0
     axis_linear.z: -1
     enable_button: 4
-    enable_turbo_button: -1
+    enable_turbo_button: 5
     frame: teleop_twist_joy
     inverted_reverse: false
     publish_stamped_twist: false
@@ -162,7 +162,7 @@ joystick_to_twist_node:
     scale_linear.x: 1.0
     scale_linear.y: 0.0
     scale_linear.z: 0.0
-    scale_linear_turbo.x: 1.0
+    scale_linear_turbo.x: 2.0
     scale_linear_turbo.y: 0.0
     scale_linear_turbo.z: 0.0
     use_sim_time: false
